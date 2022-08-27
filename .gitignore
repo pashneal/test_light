@@ -11,3 +11,6 @@ Cargo.lock
 
 # These are Vim autosaves
 .*.sw[a-z]
+
+# Binaries
+*.out
