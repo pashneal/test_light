@@ -1,0 +1,13 @@
+[package]
+name = "test_light"
+version = "0.1.0"
+edition = "2021"
+
+# Build for Beaglebone AI architecture
+[target.armv7-unknown-linux-gnueabihf]
+linker="armv7-unknown-linux-gnueabihf"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
