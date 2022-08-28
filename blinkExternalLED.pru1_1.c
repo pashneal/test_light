@@ -32,7 +32,8 @@ void main(void) {
 	__halt();
 }
 
-// Set direction of P9_25 (which is port 6 pin 17)
+// NOTE: for rust conversion we can just run sys commands
+// Set direction of P9_15 (which is port 3 pin 12)
 #pragma DATA_SECTION(init_pins, ".init_pins")
 #pragma RETAIN(init_pins)
 const char init_pins[] =  
