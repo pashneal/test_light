@@ -7,6 +7,12 @@ edition = "2021"
 [target.armv7-unknown-linux-gnueabihf]
 linker="armv7-unknown-linux-gnueabihf"
 
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
