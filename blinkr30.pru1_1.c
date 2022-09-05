@@ -12,6 +12,7 @@
 #include <pru_cfg.h>
 #include "resource_table_empty.h"
 #include "prugpio.h"
+#include "
 
 volatile register unsigned int __R30;
 volatile register unsigned int __R31;
