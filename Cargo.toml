@@ -3,9 +3,11 @@ name = "test_light"
 version = "0.1.0"
 edition = "2021"
 
-# Build for Beaglebone AI architecture
-[target.armv7-unknown-linux-gnueabihf]
-linker="armv7-unknown-linux-gnueabihf"
+# Create as a standard library instead of a standalone executable (we don't know how to handle _libc stuff
+[lib]
+name = "test_light"
+crate-type = ["staticlib"]  
+
 
 [profile.dev]
 panic = "abort"
