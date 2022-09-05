@@ -13,6 +13,7 @@
 #include "resource_table_empty.h"
 #include "prugpio.h"
 #include "registers.h"
+#include "test_light.h"
 
 
 void main(void) {
@@ -20,8 +21,8 @@ void main(void) {
 	uint32_t gpio = 0xffff;
 
 	while(1) {
-		xor_reg30(gpio);					// Set the GPIO pin to 1
-		sleep(500);    // Wait 1 second
+    set_reg();
+		sleep(500);    
 	}
 	__halt();
 }
