@@ -12,7 +12,8 @@ fn set_reg(){
     unsafe { 
         asm!(
             "ldi r14, 0xffff",
-            "xor r30, r30, r14");
+            "xor r30, r30, r14"
+        );
     }
 }
 

@@ -12,20 +12,17 @@
 #include <pru_cfg.h>
 #include "resource_table_empty.h"
 #include "prugpio.h"
+#include "registers.h"
 
-volatile register unsigned int __R30;
-volatile register unsigned int __R31;
 
 void main(void) {
 	// Select which pins to toggle.  These are all on pru1_1
 	uint32_t gpio = 0xffff;
 
 	while(1) {
-		__R30 |= gpio;					// Set the GPIO pin to 1
-		__delay_cycles(500000000/5);    // Wait 1/2 second
-		__R30 &= ~gpio;					// Clear the GPIO pin
-		__delay_cycles(500000000/5); 
-		}
+		xor_reg30(gpio);					// Set the GPIO pin to 1
+		sleep(500);    // Wait 1 second
+	}
 	__halt();
 }
 
